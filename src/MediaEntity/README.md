@@ -1,4 +1,3 @@
-# bat-media
 ### Apiato MediaEntity Container
 
 Для использования подключить к нужной сущности
@@ -11,9 +10,9 @@
 
 `InteractsWithBatImages`
 
-Вы можете изменить основные свойства для генерации картинок в
+Вы можете изменить основные свойства для генерации картинок в 
 
-`config/bat-media.conf`
+`config/bat-image.conf`
 
 Также в этом конфиге вы можете поменять драйвер получения конфигурации картинок
 
@@ -25,14 +24,14 @@
 
     public function getMediaConfigName(): string
     {
-        return 'section-modelMedia';
+        return 'rZDSection-newsMedia';
     }
 
-Структура конфига
+Структура конфига 
 
     return [
         'collections' => [
-            ModelMediaEnum::COLLECTION_PREVIEW => [
+            NewsMediaEnum::COLLECTION_PREVIEW => [
                 'is_gallery' => false,
                 'format' => MediaFormat::WEBP,
                 'non_queued' => true,
@@ -49,7 +48,7 @@
                     ],
                 ],
             ],
-            ModelMediaEnum::COLLECTION_GALLERY => [
+            NewsMediaEnum::COLLECTION_GALLERY => [
                 'is_gallery' => false,
                     'conversions' => [
                         MediaSize::MEDIUM->value => [
