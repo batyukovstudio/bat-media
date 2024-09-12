@@ -33,11 +33,5 @@
       ]
     }
   },
-  "minimum-stability": "dev",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://github.com/batyukovstudio/bat-media"
-    }
-  ]
+  "minimum-stability": "dev"
 }
