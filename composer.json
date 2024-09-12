@@ -1,6 +1,7 @@
 {
   "name": "batyukovstudio/bat-media",
   "description": "Media conversion generator",
+  "license": "MIT",
   "keywords": [
     "bat",
     "media",
@@ -25,5 +26,18 @@
     "intervention/image-laravel": "^1.3",
     "prettus/l5-repository": "2.9.*"
   },
-  "minimum-stability": "dev"
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BatyukovStudio\\BatMedia\\MediaEntity\\Providers\\SwaggerServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://github.com/batyukovstudio/bat-media"
+    }
+  ]
 }
