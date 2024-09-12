@@ -8,7 +8,7 @@ use Illuminate\Support\ServiceProvider as ParentMainServiceProvider;
  * The Main Service Provider of this container.
  * It will be automatically registered by the framework.
  */
-class MainServiceProvider extends ParentMainServiceProvider
+class BatMediaServiceProvider extends ParentMainServiceProvider
 {
     public array $serviceProviders = [
         // InternalServiceProviderExample::class,
