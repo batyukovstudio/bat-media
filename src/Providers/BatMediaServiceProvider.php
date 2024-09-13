@@ -17,7 +17,7 @@ class BatMediaServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->loadMigrationsFrom(__DIR__ . '/../MediaEntity\Database/Migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../MediaEntity/Database/Migrations');
 
 
         $source = __DIR__ . '/../../config/bat-media.php';
