@@ -1,13 +1,13 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\GetConfigStrategy;
+namespace Batyukovstudio\BatMedia\MediaEntity\GetConfigStrategy;
 
-use BatyukovStudio\BatMedia\MediaEntity\Contracts\HasBatImages;
-use BatyukovStudio\BatMedia\MediaEntity\Enums\MediaDriverEnum;
-use BatyukovStudio\BatMedia\MediaEntity\GetConfigStrategy\Interfaces\GetMediaConfigStrategy;
-use BatyukovStudio\BatMedia\MediaEntity\GetConfigStrategy\Strategies\GetConfigFromConfigFileStrategy;
-use BatyukovStudio\BatMedia\MediaEntity\GetConfigStrategy\Strategies\GetConfigFromDatabaseStrategy;
-use BatyukovStudio\BatMedia\MediaEntity\Handlers\MediaConfigHandler;
+use Batyukovstudio\BatMedia\MediaEntity\Contracts\HasBatImages;
+use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaDriverEnum;
+use Batyukovstudio\BatMedia\MediaEntity\GetConfigStrategy\Interfaces\GetMediaConfigStrategy;
+use Batyukovstudio\BatMedia\MediaEntity\GetConfigStrategy\Strategies\GetConfigFromConfigFileStrategy;
+use Batyukovstudio\BatMedia\MediaEntity\GetConfigStrategy\Strategies\GetConfigFromDatabaseStrategy;
+use Batyukovstudio\BatMedia\MediaEntity\Handlers\MediaConfigHandler;
 
 class MediaConfigManager
 {

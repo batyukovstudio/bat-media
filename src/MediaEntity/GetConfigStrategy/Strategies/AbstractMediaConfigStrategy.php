@@ -1,10 +1,10 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\GetConfigStrategy\Strategies;
+namespace Batyukovstudio\BatMedia\MediaEntity\GetConfigStrategy\Strategies;
 
 
-use BatyukovStudio\BatMedia\MediaEntity\Contracts\HasBatImages;
-use BatyukovStudio\BatMedia\MediaEntity\GetConfigStrategy\Interfaces\GetMediaConfigStrategy;
+use Batyukovstudio\BatMedia\MediaEntity\Contracts\HasBatImages;
+use Batyukovstudio\BatMedia\MediaEntity\GetConfigStrategy\Interfaces\GetMediaConfigStrategy;
 
 abstract class AbstractMediaConfigStrategy implements GetMediaConfigStrategy
 {

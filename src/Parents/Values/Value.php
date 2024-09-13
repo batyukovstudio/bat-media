@@ -1,6 +1,6 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\Parents\Values;
+namespace Batyukovstudio\BatMedia\Parents\Values;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Str;

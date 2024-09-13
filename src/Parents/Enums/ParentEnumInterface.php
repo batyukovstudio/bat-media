@@ -1,6 +1,6 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\Parents\Enums;
+namespace Batyukovstudio\BatMedia\Parents\Enums;
 
 interface ParentEnumInterface
 {

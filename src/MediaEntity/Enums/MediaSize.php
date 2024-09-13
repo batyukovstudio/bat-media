@@ -1,9 +1,9 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\Enums;
+namespace Batyukovstudio\BatMedia\MediaEntity\Enums;
 
-use BatyukovStudio\BatMedia\MediaEntity\Traits\EnumLabelTrait;
-use BatyukovStudio\BatMedia\Parents\Enums\ParentEnumInterface;
+use Batyukovstudio\BatMedia\MediaEntity\Traits\EnumLabelTrait;
+use Batyukovstudio\BatMedia\Parents\Enums\ParentEnumInterface;
 
 enum MediaSize: string implements ParentEnumInterface
 {

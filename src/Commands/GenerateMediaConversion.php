@@ -1,5 +1,5 @@
 <?php
-namespace BatyukovStudio\BatMedia\Commands;
+namespace Batyukovstudio\BatMedia\Commands;
 
 use Illuminate\Console\Command;
 

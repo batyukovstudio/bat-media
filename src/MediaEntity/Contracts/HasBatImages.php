@@ -1,9 +1,9 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\Contracts;
+namespace Batyukovstudio\BatMedia\MediaEntity\Contracts;
 
-use BatyukovStudio\BatMedia\MediaEntity\Enums\MediaDriverEnum;
-use BatyukovStudio\BatMedia\MediaEntity\Handlers\MediaConfigHandler;
+use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaDriverEnum;
+use Batyukovstudio\BatMedia\MediaEntity\Handlers\MediaConfigHandler;
 use Spatie\MediaLibrary\HasMedia;
 
 interface HasBatImages extends HasMedia

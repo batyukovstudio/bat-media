@@ -1,6 +1,6 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\GetConfigStrategy\Strategies;
+namespace Batyukovstudio\BatMedia\MediaEntity\GetConfigStrategy\Strategies;
 
 class GetConfigFromConfigFileStrategy extends AbstractMediaConfigStrategy
 {

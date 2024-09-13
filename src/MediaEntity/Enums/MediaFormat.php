@@ -1,6 +1,6 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\Enums;
+namespace Batyukovstudio\BatMedia\MediaEntity\Enums;
 
 enum MediaFormat: string
 {

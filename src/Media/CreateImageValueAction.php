@@ -1,9 +1,9 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\Media;
+namespace Batyukovstudio\BatMedia\Media;
 
 use Illuminate\Support\Facades\DB as ParentAction;
-use BatyukovStudio\BatMedia\Values\Media\ImageValue;
+use Batyukovstudio\BatMedia\Values\Media\ImageValue;
 
 class CreateImageValueAction extends ParentAction
 {

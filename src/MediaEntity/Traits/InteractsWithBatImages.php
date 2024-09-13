@@ -1,16 +1,16 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\Traits;
+namespace Batyukovstudio\BatMedia\MediaEntity\Traits;
 
-use BatyukovStudio\BatMedia\Media\CreateImageConversionsValueAction;
-use BatyukovStudio\BatMedia\Media\CreateImageObjectValueAction;
-use BatyukovStudio\BatMedia\Media\CreateImageValueAction;
-use BatyukovStudio\BatMedia\MediaEntity\Enums\MediaDriverEnum;
-use BatyukovStudio\BatMedia\MediaEntity\Enums\MediaFormat;
-use BatyukovStudio\BatMedia\MediaEntity\GetConfigStrategy\MediaConfigManager;
-use BatyukovStudio\BatMedia\MediaEntity\Handlers\MediaConfigHandler;
-use BatyukovStudio\BatMedia\Values\Media\ImageObjectValue;
-use BatyukovStudio\BatMedia\Values\Media\ImageOriginalValue;
+use Batyukovstudio\BatMedia\Media\CreateImageConversionsValueAction;
+use Batyukovstudio\BatMedia\Media\CreateImageObjectValueAction;
+use Batyukovstudio\BatMedia\Media\CreateImageValueAction;
+use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaDriverEnum;
+use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaFormat;
+use Batyukovstudio\BatMedia\MediaEntity\GetConfigStrategy\MediaConfigManager;
+use Batyukovstudio\BatMedia\MediaEntity\Handlers\MediaConfigHandler;
+use Batyukovstudio\BatMedia\Values\Media\ImageObjectValue;
+use Batyukovstudio\BatMedia\Values\Media\ImageOriginalValue;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;

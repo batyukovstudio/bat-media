@@ -1,11 +1,11 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\GetConfigStrategy\Strategies;
+namespace Batyukovstudio\BatMedia\MediaEntity\GetConfigStrategy\Strategies;
 
 
-use BatyukovStudio\BatMedia\MediaEntity\Models\MediaConversionSize;
-use BatyukovStudio\BatMedia\MediaEntity\Models\MediaEntity;
-use BatyukovStudio\BatMedia\MediaEntity\Models\MediaEntityConversion;
+use Batyukovstudio\BatMedia\MediaEntity\Models\MediaConversionSize;
+use Batyukovstudio\BatMedia\MediaEntity\Models\MediaEntity;
+use Batyukovstudio\BatMedia\MediaEntity\Models\MediaEntityConversion;
 
 class GetConfigFromDatabaseStrategy extends AbstractMediaConfigStrategy
 {

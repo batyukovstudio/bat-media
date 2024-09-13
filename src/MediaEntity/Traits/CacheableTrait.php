@@ -1,6 +1,6 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\Traits;
+namespace Batyukovstudio\BatMedia\MediaEntity\Traits;
 
 use Prettus\Repository\Traits\CacheableRepository;
 
