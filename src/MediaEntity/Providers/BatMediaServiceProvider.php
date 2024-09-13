@@ -29,6 +29,9 @@ class BatMediaServiceProvider extends ServiceProvider
 
     public function register(): void
     {
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/bat-media.php', 'bat-media'
+        );
         parent::register();
     }
 
