@@ -1,9 +1,9 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\Values\Media;
+namespace Batyukovstudio\BatMedia\Values\Media;
 
 
-use BatyukovStudio\BatMedia\Parents\Values\Value as ParentValue;
+use Batyukovstudio\BatMedia\Parents\Values\Value as ParentValue;
 
 class SimpleImageValue extends ParentValue
 {

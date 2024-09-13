@@ -1,6 +1,6 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\Providers;
+namespace Batyukovstudio\BatMedia\MediaEntity\Providers;
 
 use Illuminate\Support\ServiceProvider as ParentMainServiceProvider;
 

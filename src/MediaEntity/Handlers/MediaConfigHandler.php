@@ -1,8 +1,8 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\Handlers;
+namespace Batyukovstudio\BatMedia\MediaEntity\Handlers;
 
-use BatyukovStudio\BatMedia\MediaEntity\Enums\MediaFormat;
+use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaFormat;
 
 class MediaConfigHandler
 {

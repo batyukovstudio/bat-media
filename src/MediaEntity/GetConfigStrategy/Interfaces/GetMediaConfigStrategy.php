@@ -1,6 +1,6 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\GetConfigStrategy\Interfaces;
+namespace Batyukovstudio\BatMedia\MediaEntity\GetConfigStrategy\Interfaces;
 
 interface GetMediaConfigStrategy
 {

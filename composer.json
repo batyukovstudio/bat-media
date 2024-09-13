@@ -17,7 +17,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "BatyukovStudio\\BatMedia\\": "src/"
+      "Batyukovstudio\\BatMedia\\": "src/"
     }
   },
   "require": {
@@ -30,7 +30,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "BatyukovStudio\\BatMedia\\MediaEntity\\Providers\\SwaggerServiceProvider"
+        "Batyukovstudio\\BatMedia\\MediaEntity\\Providers\\BatMediaServiceProvider"
       ]
     }
   },

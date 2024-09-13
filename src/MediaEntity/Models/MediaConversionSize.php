@@ -1,9 +1,9 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\MediaEntity\Models;
+namespace Batyukovstudio\BatMedia\MediaEntity\Models;
 
-use BatyukovStudio\BatMedia\MediaEntity\Enums\MediaFormat;
-use BatyukovStudio\BatMedia\MediaEntity\Enums\MediaSize;
+use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaFormat;
+use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaSize;
 use Illuminate\Database\Eloquent\Model as ParentModel;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 

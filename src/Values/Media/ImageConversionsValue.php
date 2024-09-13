@@ -1,8 +1,8 @@
 <?php
 
-namespace BatyukovStudio\BatMedia\Values\Media;
+namespace Batyukovstudio\BatMedia\Values\Media;
 
-use BatyukovStudio\BatMedia\Parents\Values\Value;
+use Batyukovstudio\BatMedia\Parents\Values\Value;
 use Illuminate\Support\Collection;
 
 class ImageConversionsValue extends Value
