@@ -1,14 +1,10 @@
 <?php
 
-namespace Batyukovstudio\BatMedia\MediaEntity\Providers;
+namespace Batyukovstudio\BatMedia\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-/**
- * The Main Service Provider of this container.
- * It will be automatically registered by the framework.
- * @method publishesMigrations(array $array)
- */
+
 class BatMediaServiceProvider extends ServiceProvider
 {
     public array $serviceProviders = [
@@ -21,13 +17,10 @@ class BatMediaServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-
-        $this->publishesMigrations([
-            __DIR__.'/../Data/Migrations' => database_path('bat_media_migrations'),
-        ]);
+        $this->loadMigrationsFrom(__DIR__ . '/../../../../database/migrations');
 
 
-        $source = __DIR__ . '/../../../config/bat-media.php';
+        $source = __DIR__ . '/../../config/bat-media.php';
         $this->publishes([
             $source => config_path('bat-media.php')
         ], 'bat-media-config');
