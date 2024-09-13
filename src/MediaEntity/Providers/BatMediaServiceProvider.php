@@ -20,8 +20,7 @@ class BatMediaServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $source = __DIR__ . '/../config/bat-media.php';
-
+        $source = __DIR__ . '/../../../config/bat-media.php';
         $this->publishes([
             $source => config_path('bat-media.php')
         ], 'bat-media-config');
@@ -30,7 +29,7 @@ class BatMediaServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/bat-media.php', 'bat-media'
+            __DIR__.'/../../../config/bat-media.php', 'bat-media'
         );
         parent::register();
     }
