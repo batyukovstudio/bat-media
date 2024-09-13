@@ -24,7 +24,7 @@ class BatMediaServiceProvider extends ServiceProvider
 
         $this->publishes([
             $source => config_path('bat-media.php')
-        ]);
+        ], 'bat-media-config');
     }
 
     public function register(): void
