@@ -23,7 +23,7 @@ class BatMediaServiceProvider extends ServiceProvider
     {
 
         $this->publishesMigrations([
-            __DIR__.'/../Data/Migrations' => database_path('migrations'),
+            __DIR__.'/../Data/Migrations' => database_path('bat_media_migrations'),
         ]);
 
 
