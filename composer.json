@@ -1,6 +1,7 @@
 {
   "name": "batyukovstudio/bat-media",
   "description": "Media conversion generator",
+  "type": "library",
   "license": "MIT",
   "keywords": [
     "bat",
