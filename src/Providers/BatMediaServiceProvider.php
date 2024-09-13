@@ -17,7 +17,7 @@ class BatMediaServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->loadMigrationsFrom(__DIR__ . '/../../../../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../MediaEntity\Database/Migrations');
 
 
         $source = __DIR__ . '/../../config/bat-media.php';
@@ -30,7 +30,7 @@ class BatMediaServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/bat-media.php', 'bat-media'
+            __DIR__ . '/../../config/bat-media.php', 'bat-media'
         );
         parent::register();
     }
