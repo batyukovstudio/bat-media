@@ -2,8 +2,10 @@
 
 namespace Batyukovstudio\BatMedia\MediaEntity\Models;
 
+use Batyukovstudio\BatMedia\MediaEntity\Contracts\HasEntityClassInterface;
 use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaFormat;
 use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaSize;
+use Batyukovstudio\BatMedia\Observers\ClearMediaCacheObserver;
 use Illuminate\Database\Eloquent\Model as ParentModel;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -32,7 +34,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property MediaFormat $format
  * @mixin \Eloquent
  */
-class MediaConversionSize extends ParentModel
+class MediaConversionSize extends ParentModel implements
+    HasEntityClassInterface
 {
     /**
      * A resource key to be used in the serialized responses.
@@ -51,6 +54,13 @@ class MediaConversionSize extends ParentModel
         'format' => MediaFormat::class,
         'name' => MediaSize::class,
     ];
+
+    public static function boot(): void
+    {
+        parent::boot();
+
+        parent::observe(new ClearMediaCacheObserver);
+    }
 
     public function mediaEntityConversion(): BelongsTo
     {
@@ -133,5 +143,10 @@ class MediaConversionSize extends ParentModel
     public function setMediaEntityConversionId(int $media_entity_conversion_id): void
     {
         $this->media_entity_conversion_id = $media_entity_conversion_id;
+    }
+
+    public function getEntityClass(): string
+    {
+        return $this->getMediaEntityConversion()->getMediaEntity()->getEntityClass();
     }
 }

@@ -130,9 +130,9 @@ class MediaConfigHandler
      */
     public function validateConfig(): bool
     {
-        if (!isset($this->config['collections'])) {
-            throw new \Exception('Invalid media configuration');
-        }
+//        if (!isset($this->config['collections'])) {
+//            throw new \Exception('Invalid media configuration');
+//        }
 
         return true;
     }
