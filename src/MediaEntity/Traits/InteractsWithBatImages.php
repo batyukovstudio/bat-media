@@ -13,6 +13,7 @@ use Batyukovstudio\BatMedia\MediaEntity\Tasks\GetMediaConfigCacheKey;
 use Batyukovstudio\BatMedia\Values\Media\ImageObjectValue;
 use Batyukovstudio\BatMedia\Values\Media\ImageOriginalValue;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Intervention\Image\Drivers\Gd\Driver;
