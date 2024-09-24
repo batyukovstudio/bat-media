@@ -9,9 +9,11 @@ use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaDriverEnum;
 use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaFormat;
 use Batyukovstudio\BatMedia\MediaEntity\GetConfigStrategy\MediaConfigManager;
 use Batyukovstudio\BatMedia\MediaEntity\Handlers\MediaConfigHandler;
+use Batyukovstudio\BatMedia\MediaEntity\Tasks\GetMediaConfigCacheKey;
 use Batyukovstudio\BatMedia\Values\Media\ImageObjectValue;
 use Batyukovstudio\BatMedia\Values\Media\ImageOriginalValue;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Intervention\Image\Drivers\Gd\Driver;
@@ -43,8 +45,11 @@ trait InteractsWithBatImages
      */
     public function getMediaConfigHandler(): MediaConfigHandler
     {
+        $mediaConfigCacheKey = app(GetMediaConfigCacheKey::class)->run(self::class);
         $configManager = new MediaConfigManager(self::class);
-        $config = $configManager->getConfig();
+        $config = Cache::rememberForever($mediaConfigCacheKey, function () use ($configManager) {
+            return $configManager->getConfig();
+        });
         return $config;
     }
 

@@ -2,7 +2,9 @@
 
 namespace Batyukovstudio\BatMedia\MediaEntity\Models;
 
+use Batyukovstudio\BatMedia\MediaEntity\Contracts\HasEntityClassInterface;
 use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaFormat;
+use Batyukovstudio\BatMedia\Observers\ClearMediaCacheObserver;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model as ParentModel;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -40,7 +42,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|MediaEntityConversion whereWidth($value)
  * @mixin \Eloquent
  */
-class MediaEntityConversion extends ParentModel
+class MediaEntityConversion extends ParentModel implements
+    HasEntityClassInterface
 {
     /**
      * A resource key to be used in the serialized responses.
@@ -64,6 +67,13 @@ class MediaEntityConversion extends ParentModel
         'gallery' => 'bool',
         'queued' => 'bool',
     ];
+
+    public static function boot(): void
+    {
+        parent::boot();
+
+        parent::observe(new ClearMediaCacheObserver);
+    }
 
     public function mediaEntity(): BelongsTo
     {
@@ -180,5 +190,10 @@ class MediaEntityConversion extends ParentModel
     public function setQuality(?int $quality): void
     {
         $this->quality = $quality;
+    }
+
+    public function getEntityClass(): string
+    {
+        return $this->getMediaEntity()->getEntityClass();
     }
 }

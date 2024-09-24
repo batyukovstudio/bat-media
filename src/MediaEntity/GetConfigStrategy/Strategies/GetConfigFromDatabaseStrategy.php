@@ -19,6 +19,10 @@ class GetConfigFromDatabaseStrategy extends AbstractMediaConfigStrategy
             ])
             ->first();
 
+        if ($mediaEntity === null) {
+            throw new \Exception("Не заполнена конфигурация для сущности: " . $this->getMediaEntityClass());
+        }
+
         $mediaConfig = [
             'width' => $mediaEntity->getWidth(),
             'height' => $mediaEntity->getHeight(),

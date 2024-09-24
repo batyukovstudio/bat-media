@@ -3,6 +3,7 @@
 namespace Batyukovstudio\BatMedia\MediaEntity\Models;
 
 use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaFormat;
+use Batyukovstudio\BatMedia\Observers\ClearMediaCacheObserver;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model as ParentModel;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -58,6 +59,13 @@ class MediaEntity extends ParentModel
         'format' => MediaFormat::class,
         'queued' => 'bool',
     ];
+
+    public static function boot(): void
+    {
+        parent::boot();
+
+        parent::observe(new ClearMediaCacheObserver);
+    }
 
     public function mediaEntityConversions(): HasMany
     {
