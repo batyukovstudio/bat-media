@@ -2,6 +2,7 @@
 
 namespace Batyukovstudio\BatMedia\MediaEntity\Models;
 
+use Batyukovstudio\BatMedia\MediaEntity\Contracts\HasEntityClassInterface;
 use Batyukovstudio\BatMedia\MediaEntity\Enums\MediaFormat;
 use Batyukovstudio\BatMedia\Observers\ClearMediaCacheObserver;
 use Illuminate\Database\Eloquent\Collection;
@@ -37,7 +38,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|MediaEntity whereWidth($value)
  * @mixin \Eloquent
  */
-class MediaEntity extends ParentModel
+class MediaEntity extends ParentModel implements
+    HasEntityClassInterface
 {
     /**
      * A resource key to be used in the serialized responses.
