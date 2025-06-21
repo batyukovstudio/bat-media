@@ -21,7 +21,7 @@
   },
   "require": {
     "php": ">=8.2",
-    "laravel/framework": "^10.0",
+    "laravel/framework": "*",
     "spatie/laravel-medialibrary": "^11.5",
     "intervention/image-laravel": "^1.3"
   },
