@@ -1,6 +1,8 @@
 # bat-media
 ### Apiato MediaEntity Container
 
+`composer require batyukovstudio/bat-media`
+
 Для использования подключить к нужной сущности
 
 Интерфейс
